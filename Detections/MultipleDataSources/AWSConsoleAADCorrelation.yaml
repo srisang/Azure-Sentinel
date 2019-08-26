@@ -4,6 +4,9 @@ description: |
 	This query creates a list of IP addresses with multiple failed login attempts 
 	to the AWS console above a set threshold. It then looks for any successful Azure
 	AD logins from these IPs within the same timeframe.
+name: IP with multiple failed AWS console logins successfully logs in to AAD.
+description: |
+	This query looks for IP addresses with multiple failed login attempts to the AWS console with a successful Azure AD login within the same timeframe.
 severity: Medium
 requiredDataConnectors:
   - connectorId: AzureActiveDirectory
