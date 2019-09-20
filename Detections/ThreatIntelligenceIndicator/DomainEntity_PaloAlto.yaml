@@ -34,6 +34,7 @@ query: |
         | where Active == true
         // Picking up only IOC's that contain the entities we want
         | where isnotempty(DomainName)
+        | project-away Url
         | join (
             CommonSecurityLog
             | where TimeGenerated > ago(dt_lookBack)
